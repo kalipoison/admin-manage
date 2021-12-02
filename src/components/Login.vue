@@ -3,7 +3,7 @@
     <div class="login_box">
         <!-- 头像区域 -->
         <div class="avatar_box">
-            <img src="../assets/logo.png" alt />
+            <img src="../assets/logo.jpg" alt />
         </div>
         <!-- 登录表单区域 -->
         <el-form 
@@ -42,7 +42,7 @@ export default {
         // 登录表单数据的绑定对象
             loginForm: {
                 username: "admin",
-                password: "admin"
+                password: "123456"
             },
             //   表单的验证规则对象
             loginFormRules: {
