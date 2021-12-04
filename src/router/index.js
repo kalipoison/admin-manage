@@ -20,11 +20,11 @@ const routes = [{
   children: [{
     path: '/welcome',
     component: Welcome
+  },{
+    path: '/users',
+    component: User,
   }],
-}, {
-  path: '/users',
-  component: User,
-}
+}, 
 ]
 
 const router = new VueRouter({

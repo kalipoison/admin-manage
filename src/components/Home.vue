@@ -20,6 +20,7 @@
           :collapse="isCollapse"
           :collapse-transition="false"
           :default-active="activePath"
+          router
         >
           <!-- 一级菜单 -->
           <el-submenu 
@@ -135,14 +136,13 @@ export default {
   }
 }
 
-.el-aside {
-  background-color: #333744;
+// .el-aside {
+//   background-color: #333744;
 
-  .el-menu {
-    border: none;
-  }
-}
-
+//   .el-menu {
+//     border: none;
+//   }
+// }
 
 .el-aside {
   background-color: rgb(84, 92, 100);
