@@ -19,9 +19,14 @@
           unique-opened
           :collapse="isCollapse"
           :collapse-transition="false"
+          :default-active="activePath"
         >
           <!-- 一级菜单 -->
-          <el-submenu :index="item.id + ''" v-for="item in menuList" :key="item.id">
+          <el-submenu 
+            :index="item.id + ''" 
+            v-for="item in menuList" 
+            :key="item.id"
+          >
             <!-- 一级菜单的模板区域 -->
             <template slot="title">
               <!-- 图标 -->
@@ -34,6 +39,7 @@
               :index="subItem.id + ''"
               v-for="subItem in item.children"
               :key="subItem.id"
+              @click="saveNavState('/' + subItem.path)"
             >
               <template slot="title">
                 <!-- 图标 -->
@@ -45,7 +51,10 @@
           </el-submenu>
         </el-menu>
       </el-aside>
-      <el-main>Main</el-main>
+      <el-main>
+        <!-- 路由占位符 -->
+        <router-view></router-view>
+      </el-main>
     </el-container>
   </el-container>
 </template>
@@ -66,11 +75,14 @@ export default {
         '145': 'iconfont icon-baobiao'
       },
       // 是否折叠侧边栏
-      isCollapse : false
+      isCollapse : false,
+      // 被激活的连接地址
+      activePath : '',
     }
   },
   created () {
-    this.getMenuList()
+    this.getMenuList();
+    this.activePath = window.sessionStorage.getItem('activePath');
   },
   methods: {
     logout () {
@@ -84,12 +96,15 @@ export default {
       const { data: res } = await this.$http.get('menus')
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
       this.menuList = res.data
-      // console.log(res)
+      console.log(this.menuList)
     },
     // 菜单的折叠与展开
     toggleCollapse () {
       this.isCollapse = !this.isCollapse
     },
+    saveNavState(activePath) {
+      window.sessionStorage.setItem('activePath', activePath)
+    }
   }
 
 
