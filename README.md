@@ -1,27 +1,14 @@
 # admin-manage
 
-## Project setup
-```
-yarn install
-```
+前台代码：https://github.com/kalipoison/admin-manage
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+后台代码：https://github.com/kalipoison/admin-manage-server
 
-### Compiles and minifies for production
-```
-yarn build
-```
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# 启动项目
+​
+## 安装依赖 ：npm install
+## 启动项目 ：npm run serve
 
 
 # 技术栈
