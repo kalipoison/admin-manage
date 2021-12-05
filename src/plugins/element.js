@@ -6,7 +6,7 @@ import { Message } from 'element-ui';
 import { Container, Header, Aside, Main } from 'element-ui';
 import { Menu, Submenu, MenuItemGroup, MenuItem } from 'element-ui';
 import { Breadcrumb, BreadcrumbItem, Card, Row, Col, Table, TableColumn, Switch, Tooltip, Pagination,
-    Dialog, MessageBox, Tag, Tree, Select, Option } from 'element-ui';
+    Dialog, MessageBox, Tag, Tree, Select, Option, Cascader, Alert, Tabs, TabPane } from 'element-ui';
 Vue.use(Button)
 Vue.use(Form)
 Vue.use(FormItem)
@@ -40,3 +40,7 @@ Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)

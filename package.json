@@ -15,7 +15,8 @@
     "less-loader": "^6.1.3",
     "lodash": "^4.17.21",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.3"
+    "vue-router": "^3.0.3",
+    "vue-table-with-tree-grid": "^0.2.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.12.0",
